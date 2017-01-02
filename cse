@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomSearchEngine id="srfek920byy" creator="011766209404426652984" keywords="&lt;script&gt;alert(1)&lt;/script&gt;ðŸ’©" language="en" encoding="ISO-2022-JP" enable_suggest="true">
+  <Title>&lt;script&gt;%22\u0022\u{22}alert(1)&lt;/script&gt;ðŸ’©</Title>
+  <Description>&lt;script&gt;alert(1)&lt;/script&gt;ðŸ’©</Description>
+  <Context>
+    <BackgroundLabels>
+      <Label name="_cse_srfek920byy" mode="FILTER" />
+      <Label name="_cse_exclude_srfek920byy" mode="ELIMINATE" />
+    </BackgroundLabels>
+  </Context>
+  <LookAndFeel nonprofit="false" element_layout="8" theme="7" custom_theme="true" text_font="Arial, sans-serif" url_length="full" element_branding="show" enable_cse_thumbnail="true" promotion_url_length="full" ads_layout="1">
+    <Logo />
+    <Colors url="#008000" background="#FFFFFF" border="#FFFFFF" title="#0000CC" text="#000000" visited="#0000CC" title_hover="#0000CC" title_active="#0000CC" />
+    <Promotions title_color="#0000CC" title_visited_color="#0000CC" url_color="#008000" background_color="#FFFFFF" border_color="#336699" snippet_color="#000000" title_hover_color="#0000CC" title_active_color="#0000CC" />
+    <SearchControls input_border_color="#D9D9D9" button_border_color="#666666" button_background_color="#CECECE" tab_border_color="#E9E9E9" tab_background_color="#E9E9E9" tab_selected_border_color="#FF9900" tab_selected_background_color="#FFFFFF" />
+    <Results border_color="#FFFFFF" border_hover_color="#FFFFFF" background_color="#FFFFFF" background_hover_color="#FFFFFF" ads_background_color="#fff7f5" ads_border_color="#FFFFFF" />
+  </LookAndFeel>
+  <AdSense>
+    <Client id="partner-pub-2578768339077867" />
+  </AdSense>
+  <EnterpriseAccount>
+    <AccountAdmin first_name="&lt;script&gt;alert(1)&lt;/script&gt;ðŸ’©" last_name="&lt;script&gt;alert(1)&lt;/script&gt;ðŸ’©" email="&lt;script&gt;alert(1)&lt;/script&gt;ðŸ’©@google.com" phone="&lt;script&gt;alert(1)&lt;/script&gt;ðŸ’©" country="US" job_title="&lt;script&gt;alert(1)&lt;/script&gt;ðŸ’©" />
+    <Organization name="&lt;script&gt;alert(1)&lt;/script&gt;ðŸ’©" type="business" size="20" />
+    <ContractInfo cse_type="1" />
+  </EnterpriseAccount>
+  <ImageSearchSettings enable="true" />
+  <autocomplete_settings />
+  <sort_by_keys label="Relevance" key="" />
+  <sort_by_keys label="Date" key="date" />
+  <cse_advance_settings enable_speech="true" />
+</CustomSearchEngine>
